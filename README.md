@@ -1,100 +1,77 @@
-# Flight Tracker - Full Stack Application
+# ✈️ Flight Tracker
 
-A complete full-stack application for tracking flights built with React (TypeScript) frontend and Express.js (TypeScript) backend.
+A simple flight tracking application built with React, TypeScript, Express.js, and TailwindCSS. Track flights with mock data providers that simulate realistic flight scenarios.
 
-## Project Structure
+## 🚀 Features
 
-```
-flight-tracker-monorepo/
-├── frontend/          # React TypeScript application
-├── backend/           # Express.js TypeScript API
-├── package.json       # Root workspace configuration
-└── README.md         # This file
-```
+- **Flight tracking** - Add and track flight numbers
+- **Real-time status updates** - AWAITING, DEPARTED, ARRIVED
+- **Mock data providers** - FlightAware & FlightStats simulation
+- **Local storage** - Persist tracked flights
+- **Responsive UI** - Works on desktop and mobile
 
-## Features
+## 🛠️ Tech Stack
 
-### Frontend (React + TypeScript)
-- Modern, responsive UI for flight tracking
-- Form to add new flights to track
-- Display list/table of tracked flights
-- Flight status management (AWAITING, DEPARTED, ARRIVED)
-- Local storage persistence
-- Error handling and loading states
-- "Refresh All" functionality
+- **Frontend**: React 19, TypeScript, TailwindCSS
+- **Backend**: Express.js, TypeScript, Jest
+- **Monorepo**: npm Workspaces
 
-### Backend (Express.js + TypeScript)
-- RESTful API endpoints
-- Mock flight data providers (FlightAware, FlightStats)
-- Realistic flight scenarios simulation
-- Comprehensive error handling
-- TypeScript interfaces and types
+## 📋 Prerequisites
 
-## Setup Instructions
+- Node.js (v16+)
+- npm
 
-### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn
-
-### Installation
-
-1. **Clone and install dependencies:**
-   ```bash
-   git clone <repository-url>
-   cd flight-tracker-monorepo
-   npm install
-   ```
-
-2. **Install workspace dependencies:**
-   ```bash
-   npm run install:all
-   ```
-
-### Development
-
-1. **Start both frontend and backend:**
-   ```bash
-   npm run dev
-   ```
-
-2. **Start only backend:**
-   ```bash
-   npm run dev:backend
-   ```
-
-3. **Start only frontend:**
-   ```bash
-   npm run dev:frontend
-   ```
-
-### Build
+## 🚀 Quick Start
 
 ```bash
-npm run build
+# Clone and install
+git clone <repository-url>
+cd otonomi-challenge
+npm run install:all
+
+# Start development servers
+npm run dev
 ```
-
-### Testing
-
-```bash
-npm run test
-```
-
-## API Endpoints
-
-- `GET /health` - Health check
-- `POST /api/flights/track` - Add new flight to tracking
-- `GET /api/flights` - Get all tracked flights
-- `DELETE /api/flights/:flightNumber` - Remove flight from tracking
-- `POST /api/flights/refresh` - Refresh status of all tracked flights
-
-## Ports
 
 - Frontend: http://localhost:3000
 - Backend: http://localhost:3001
 
-## Technology Stack
+## 🧪 Testing
 
-- **Frontend:** React 18, TypeScript, Create React App
-- **Backend:** Express.js, TypeScript, Node.js
-- **Development:** Nodemon, Concurrently
-- **Package Management:** npm workspaces
+```bash
+# Run all tests
+npm run test
+
+# Run specific tests
+npm run test:backend
+npm run test:frontend
+```
+
+## 📚 API
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `POST` | `/api/flights/track` | Track a new flight |
+| `GET` | `/api/flights` | Get all tracked flights |
+| `DELETE` | `/api/flights/:flightNumber` | Remove flight |
+| `POST` | `/api/flights/refresh` | Refresh all flights |
+
+## 🎯 Flight Status
+
+- **AWAITING** - Flight is scheduled
+- **DEPARTED** - Flight has taken off
+- **ARRIVED** - Flight has landed
+
+## 🔧 Development
+
+```bash
+# Start both servers
+npm run dev
+
+# Start individual servers
+npm run dev:backend
+npm run dev:frontend
+
+# Build for production
+npm run build
+```

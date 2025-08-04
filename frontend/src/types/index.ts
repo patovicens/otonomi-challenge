@@ -9,17 +9,6 @@ export interface Flight {
 
 export type FlightStatus = 'AWAITING' | 'DEPARTED' | 'ARRIVED';
 
-export interface FlightProviderResponse {
-  actualDepartureTime: string | null;
-  actualArrivalTime: string | null;
-}
-
-export interface FlightProviderError {
-  error: string;
-}
-
-export type FlightProviderResult = FlightProviderResponse | FlightProviderError;
-
 export interface ApiResponse<T> {
   success: boolean;
   data?: T;
@@ -33,4 +22,8 @@ export interface TrackFlightRequest {
 export interface RefreshFlightsResponse {
   updatedFlights: Flight[];
   errors: Array<{ flightNumber: string; error: string }>;
+}
+
+export interface FlightFormData {
+  flightNumber: string;
 } 

@@ -1,19 +1,23 @@
 {
   "name": "flight-tracker-monorepo",
   "version": "1.0.0",
-  "description": "Full-stack flight tracking application",
+  "description": "Full-stack flight tracking application with React frontend and Express backend",
   "private": true,
   "workspaces": [
     "frontend",
     "backend"
   ],
   "scripts": {
+    "install:all": "npm install && npm install --workspace=frontend && npm install --workspace=backend",
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
     "dev:backend": "npm run dev --workspace=backend",
     "dev:frontend": "npm start --workspace=frontend",
     "build": "npm run build --workspaces",
     "test": "npm run test --workspaces",
-    "install:all": "npm install && npm install --workspace=frontend && npm install --workspace=backend"
+    "test:backend": "npm test --workspace=backend",
+    "test:frontend": "npm test --workspace=frontend",
+    "start:backend": "npm start --workspace=backend",
+    "start:frontend": "npm start --workspace=frontend"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
